@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\Users\Sontik\Documents\GitHub\FleManager\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="6cbc7773921fcfedbe55657578f0cbfe614778dc">
+        <dex dex="C:\Users\Sontik\Documents\GitHub\FleManager\app\build\intermediates\pre-dexed\release\classes-516bec27339ff987bdaa5527388a60a7e6c00f5a.jar" />
+    </item>
+    <item
+        jar="D:\programming\asdk\extras\android\m2repository\com\android\support\support-annotations\23.1.1\support-annotations-23.1.1.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="8d680ba5a623724d1fb0e81c36a790f023a6cede">
+        <dex dex="C:\Users\Sontik\Documents\GitHub\FleManager\app\build\intermediates\pre-dexed\release\support-annotations-23.1.1-ed095bd46ad74e5cada0a2f5fe57ff7fe701bdfe.jar" />
+    </item>
+    <item
+        jar="C:\Users\Sontik\Documents\GitHub\FleManager\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\jars\libs\internal_impl-23.1.1.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="a4de9c81ae239414e1ed0f86441b02abaf29bca9">
+        <dex dex="C:\Users\Sontik\Documents\GitHub\FleManager\app\build\intermediates\pre-dexed\release\internal_impl-23.1.1-b4d8dd44ae2eda3cceeb3ac211de48e339c2b75d.jar" />
+    </item>
+    <item
+        jar="C:\Users\Sontik\Documents\GitHub\FleManager\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="5c5699834e9722f1c288fea2de82725d078ba127">
+        <dex dex="C:\Users\Sontik\Documents\GitHub\FleManager\app\build\intermediates\pre-dexed\release\classes-35a5e2c1fe39938b846fd01da56595903ae0fbb5.jar" />
+    </item>
+    <item
+        jar="C:\Users\Sontik\Documents\GitHub\FleManager\app\build\intermediates\exploded-aar\com.android.support\design\23.1.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="379471b2bd17d9737c050345c08e8c7d16589784">
+        <dex dex="C:\Users\Sontik\Documents\GitHub\FleManager\app\build\intermediates\pre-dexed\release\classes-7d676edef0e97083334a3cc57ecc02d13263a073.jar" />
+    </item>
+    <item
+        jar="C:\Users\Sontik\Documents\GitHub\FleManager\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.1.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="09c5e804bc67fc0580360043dff067df574a60d4">
+        <dex dex="C:\Users\Sontik\Documents\GitHub\FleManager\app\build\intermediates\pre-dexed\release\classes-a71c12d2e56e9f7db67abc710b936f6612e0d976.jar" />
+    </item>
+    <item
+        jar="C:\Users\Sontik\Documents\GitHub\FleManager\app\libs\httpcore-4.4.4.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="b31526a230871fbe285fbcbe2813f9c0839ae9b0">
+        <dex dex="C:\Users\Sontik\Documents\GitHub\FleManager\app\build\intermediates\pre-dexed\release\httpcore-4.4.4-98d8ec7212b3fbdc2444ae48cae9d023fe4e89b8.jar" />
+    </item>
+    <item
+        jar="C:\Users\Sontik\Documents\GitHub\FleManager\app\libs\android-async-http-1.4.8.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="77bbfe240e437ecb396d982afa0d3bd4f9090ba7">
+        <dex dex="C:\Users\Sontik\Documents\GitHub\FleManager\app\build\intermediates\pre-dexed\release\android-async-http-1.4.8-e12f945e734e1e62c96e25bdf24ba5d233910949.jar" />
+    </item>
+
+</items>
