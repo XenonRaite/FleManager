@@ -57,7 +57,7 @@ public class FileManagerClient {
                     }
                     //need refresh list
                     activity.refreshFileListView();
-                    activity.showToastMessage(FileListActivity.REFRESH_LIST, null);
+                    activity.showToastMessage(activity,FileListActivity.REFRESH_LIST, null);
                 }
             }
         });
@@ -91,7 +91,7 @@ public class FileManagerClient {
             public void onSuccess(int i, Header[] headers, byte[] bytes) {
 
                 Log.d("FileListActivity", "deleteFiles onSuccess");
-                fileListActivity.showToastMessage(FileListActivity.FILE_DELETED, null);
+                fileListActivity.showToastMessage(fileListActivity,FileListActivity.FILE_DELETED, null);
                 //need refresh list
                 FileManagerClient.getFileList(fileListActivity);
             }
@@ -132,7 +132,7 @@ public class FileManagerClient {
             public void onSuccess(int i, Header[] headers, byte[] bytes) {
 
                 Log.d("FileListActivity", "deleteFiles new method onSuccess");
-                fileListActivity.showToastMessage(FileListActivity.FILE_DELETED, null);
+                fileListActivity.showToastMessage(fileListActivity,FileListActivity.FILE_DELETED, null);
                 //need refresh list
                 FileManagerClient.getFileList(fileListActivity);
 
@@ -147,6 +147,8 @@ public class FileManagerClient {
         });
 
     }
+
+    @Deprecated
     public static void renameFile(final FileListActivity fileListActivity, int indexFile, String fileNewName) {
         String oldnamefile = FileList.getFileList().get(indexFile).getFileName();
 
@@ -156,7 +158,7 @@ public class FileManagerClient {
             public void onSuccess(int i, Header[] headers, byte[] bytes) {
 
 
-                fileListActivity.showToastMessage(FileListActivity.RENAME_SUCSESS, null);
+                fileListActivity.showToastMessage(fileListActivity,FileListActivity.RENAME_SUCSESS, null);
                 //need refresh list
                 FileManagerClient.getFileList(fileListActivity);
 
@@ -165,9 +167,48 @@ public class FileManagerClient {
             @Override
             public void onFailure(int i, Header[] headers, byte[] bytes, Throwable throwable) {
 
-                fileListActivity.showToastMessage(FileListActivity.RENAME_FAILURE, null);
+                fileListActivity.showToastMessage(fileListActivity,FileListActivity.RENAME_FAILURE, null);
             }
         });
+
+    }
+
+    public static void renameFileJSON(final FileListActivity fileListActivity, int indexFile, String fileNewName) {
+        String oldnamefile = FileList.getFileList().get(indexFile).getFileName();
+        JSONObject jsonObject = new JSONObject();
+        try {
+            jsonObject.put("oldname",oldnamefile);
+            jsonObject.put("newname",fileNewName);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        ByteArrayEntity entity = null;
+        try {
+            entity = new ByteArrayEntity(jsonObject.toString().getBytes("UTF-8"));
+            Log.d("JSON", jsonObject.toString());
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+
+
+        client.put(fileListActivity,getAbsoluteUrl(ServerAPI.RENAME_FILE_NEW_METHOD),entity, "application/json", new AsyncHttpResponseHandler() {
+            @Override
+            public void onSuccess(int i, Header[] headers, byte[] bytes) {
+
+
+                fileListActivity.showToastMessage(fileListActivity,FileListActivity.RENAME_SUCSESS, null);
+                //need refresh list
+                FileManagerClient.getFileList(fileListActivity);
+
+            }
+
+            @Override
+            public void onFailure(int i, Header[] headers, byte[] bytes, Throwable throwable) {
+
+                fileListActivity.showToastMessage(fileListActivity,FileListActivity.RENAME_FAILURE, null);
+            }
+        });
+
 
     }
 

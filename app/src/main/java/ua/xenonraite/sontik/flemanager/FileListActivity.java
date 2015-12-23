@@ -1,5 +1,6 @@
 package ua.xenonraite.sontik.flemanager;
 
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
@@ -62,7 +63,7 @@ public class FileListActivity extends AppCompatActivity {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         String newname = input.getText().toString();
-                        FileManagerClient.renameFile(FileListActivity.this, position, newname);
+                        FileManagerClient.renameFileJSON(FileListActivity.this, position, newname);
                     }
                 });
                 builder.setNegativeButton(getResources().getString(R.string.dialog_rename_button_cencel), new DialogInterface.OnClickListener() {
@@ -87,21 +88,21 @@ public class FileListActivity extends AppCompatActivity {
         return true;
     }
 
-    public void showToastMessage(int codeMsg, String appendMsg) {
+    public void showToastMessage(Activity activity,int codeMsg, String appendMsg) {
         switch (codeMsg) {
             case RENAME_SUCSESS:
-                Toast.makeText(FileListActivity.this, getResources().getString(R.string.msg_file_renamed) + " " + appendMsg == null ? "+" : appendMsg, Toast.LENGTH_SHORT).show();
+                Toast.makeText(activity, activity.getResources().getString(R.string.msg_file_renamed) + " " + ((appendMsg == null) ? "" : appendMsg), Toast.LENGTH_SHORT).show();
                 break;
             case FILE_DELETED:
-                Toast.makeText(FileListActivity.this, getResources().getString(R.string.msg_files_deleted) + " " + appendMsg == null ? "+" : appendMsg, Toast.LENGTH_SHORT).show();
+                Toast.makeText(activity, activity.getString(R.string.msg_files_deleted) + " " + ((appendMsg == null) ? "" : appendMsg), Toast.LENGTH_SHORT).show();
                 break;
             case REFRESH_LIST:
-                Toast.makeText(FileListActivity.this, getResources().getString(R.string.msg_file_list_loaded) + " " + appendMsg == null ? "+" : appendMsg, Toast.LENGTH_SHORT).show();
+                Toast.makeText(activity,activity.getResources().getString(R.string.msg_file_list_loaded) + " " + ((appendMsg == null) ? "" : appendMsg), Toast.LENGTH_SHORT).show();
                 break;
             case RENAME_FAILURE:
                 break;
             case MSG:
-                Toast.makeText(FileListActivity.this, appendMsg == null ? "+" : appendMsg, Toast.LENGTH_SHORT).show();
+                Toast.makeText(activity, appendMsg == null ? "+" : appendMsg, Toast.LENGTH_SHORT).show();
                 break;
             default:
                 break;
@@ -153,7 +154,7 @@ public class FileListActivity extends AppCompatActivity {
                 FileManagerClient.deleteFilesByListWithJson(FileListActivity.this, listIds);
                 return true;
             default:
-                showToastMessage(MSG, getResources().getString(R.string.error_notsupport));
+                showToastMessage(this,MSG, getResources().getString(R.string.error_notsupport));
                 break;
         }
         return super.onOptionsItemSelected(item);

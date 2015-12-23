@@ -43,26 +43,27 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="FileListActivity.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="FileListActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/ua/xenonraite/sontik/flemanager/FileListActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="51" column="41" selection-start-line="51" selection-start-column="41" selection-end-line="51" selection-end-column="41" />
+            <state vertical-scroll-proportion="0.62882096">
+              <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1937#1991#0" expanded="true" />
-                <element signature="e#2217#2276#0" expanded="true" />
-                <element signature="e#2278#2629#0" expanded="true" />
-                <element signature="e#2628#2629#0" expanded="true" />
-                <element signature="e#2674#2736#0" expanded="true" />
-                <element signature="e#2738#2965#0" expanded="true" />
-                <element signature="e#2964#2965#0" expanded="true" />
-                <element signature="e#3051#3052#0" expanded="true" />
-                <element signature="e#3577#3628#0" expanded="true" />
-                <element signature="e#3810#3862#0" expanded="true" />
-                <element signature="e#4044#4099#0" expanded="true" />
-                <element signature="e#5406#5415#0" expanded="true" />
-                <element signature="e#6508#6559#0" expanded="true" />
+                <element signature="e#1591#3085#0" expanded="true" />
+                <element signature="e#1966#2020#0" expanded="true" />
+                <element signature="e#2246#2305#0" expanded="true" />
+                <element signature="e#2307#2662#0" expanded="true" />
+                <element signature="e#2661#2662#0" expanded="true" />
+                <element signature="e#2707#2769#0" expanded="true" />
+                <element signature="e#2771#2998#0" expanded="true" />
+                <element signature="e#2997#2998#0" expanded="true" />
+                <element signature="e#3084#3085#0" expanded="true" />
+                <element signature="e#3615#3675#0" expanded="true" />
+                <element signature="e#3847#3893#0" expanded="true" />
+                <element signature="e#4064#4128#0" expanded="true" />
+                <element signature="e#5425#5434#0" expanded="true" />
+                <element signature="e#6532#6583#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -78,16 +79,16 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FileManagerClient.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="FileManagerClient.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/ua/xenonraite/sontik/flemanager/http/FileManagerClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.48253274">
-              <caret line="115" column="13" selection-start-line="115" selection-start-column="13" selection-end-line="115" selection-end-column="13" />
+            <state vertical-scroll-proportion="-0.8518519">
+              <caret line="172" column="0" selection-start-line="172" selection-start-column="0" selection-end-line="172" selection-end-column="0" />
               <folding>
                 <element signature="e#0#43#0" expanded="true" />
                 <element signature="imports" expanded="true" />
-                <element signature="e#1045#2413#0" expanded="true" />
-                <element signature="e#2412#2413#0" expanded="true" />
+                <element signature="e#1045#2422#0" expanded="true" />
+                <element signature="e#2421#2422#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -97,7 +98,7 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/java/ua/xenonraite/sontik/flemanager/http/ServerAPI.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="6" column="41" selection-start-line="6" selection-start-column="41" selection-end-line="6" selection-end-column="41" />
+              <caret line="10" column="53" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="53" />
               <folding />
             </state>
           </provider>
@@ -1259,7 +1260,7 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="C:\Users\Sontik\Documents\GitHub\FleManager" value="4352445211689" />
+        <entry key="C:\Users\Sontik\Documents\GitHub\FleManager" value="4352456142711" />
       </map>
     </option>
     <option name="projectBuildClasspath">
@@ -1593,8 +1594,8 @@
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/menu/menu_file_list.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/ua/xenonraite/sontik/flemanager/http/ServerAPI.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/ua/xenonraite/sontik/flemanager/FileListActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/ua/xenonraite/sontik/flemanager/http/FileManagerClient.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/ua/xenonraite/sontik/flemanager/FileListActivity.java" />
       </list>
     </option>
   </component>
@@ -1641,105 +1642,15 @@
               <option name="myItemId" value="FleManager" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="FleManager" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="values" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderTypeNode" />
+              <option name="myItemId" value="Gradle Scripts" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidBuildScriptsGroupNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="FleManager" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FleManager" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="menu" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderTypeNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FleManager" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="flemanager" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FleManager" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="flemanager" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FleManager" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="manifests" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidManifestsGroupNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -1758,6 +1669,8 @@
     <property name="ExportApk.ApkPath" value="C:\Users\Sontik\Documents\GitHub\FleManager\app" />
     <property name="ExportApk.Flavors" value="" />
     <property name="ExportApk.BuildType" value="release" />
+    <property name="OverrideImplement.combined" value="true" />
+    <property name="OverrideImplement.overriding.sorted" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="android.template.packageName">
@@ -2028,7 +1941,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Android Monitor" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32963988" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32963988" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297568" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -2042,7 +1955,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24964234" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24964234" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24964234" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32963988" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -2054,23 +1967,23 @@
     <layout-to-restore>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Android Monitor" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32963988" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32963988" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32963988" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24964234" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24964234" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32963988" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297568" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
+      <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297568" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297568" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -2149,19 +2062,20 @@
           <caret line="50" column="48" selection-start-line="50" selection-start-column="48" selection-end-line="50" selection-end-column="48" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1937#1991#0" expanded="true" />
-            <element signature="e#2217#2276#0" expanded="true" />
-            <element signature="e#2278#2629#0" expanded="true" />
-            <element signature="e#2628#2629#0" expanded="true" />
-            <element signature="e#2674#2736#0" expanded="true" />
-            <element signature="e#2738#2965#0" expanded="true" />
-            <element signature="e#2964#2965#0" expanded="true" />
-            <element signature="e#3051#3052#0" expanded="true" />
-            <element signature="e#3577#3628#0" expanded="true" />
-            <element signature="e#3810#3862#0" expanded="true" />
-            <element signature="e#4044#4099#0" expanded="true" />
-            <element signature="e#5406#5415#0" expanded="true" />
-            <element signature="e#6508#6559#0" expanded="true" />
+            <element signature="e#1591#3085#0" expanded="true" />
+            <element signature="e#1966#2020#0" expanded="true" />
+            <element signature="e#2246#2305#0" expanded="true" />
+            <element signature="e#2307#2662#0" expanded="true" />
+            <element signature="e#2661#2662#0" expanded="true" />
+            <element signature="e#2707#2769#0" expanded="true" />
+            <element signature="e#2771#2998#0" expanded="true" />
+            <element signature="e#2997#2998#0" expanded="true" />
+            <element signature="e#3084#3085#0" expanded="true" />
+            <element signature="e#3615#3675#0" expanded="true" />
+            <element signature="e#3847#3893#0" expanded="true" />
+            <element signature="e#4064#4128#0" expanded="true" />
+            <element signature="e#5425#5434#0" expanded="true" />
+            <element signature="e#6532#6583#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2209,19 +2123,20 @@
           <caret line="50" column="48" selection-start-line="50" selection-start-column="48" selection-end-line="50" selection-end-column="48" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1937#1991#0" expanded="true" />
-            <element signature="e#2217#2276#0" expanded="true" />
-            <element signature="e#2278#2629#0" expanded="true" />
-            <element signature="e#2628#2629#0" expanded="true" />
-            <element signature="e#2674#2736#0" expanded="true" />
-            <element signature="e#2738#2965#0" expanded="true" />
-            <element signature="e#2964#2965#0" expanded="true" />
-            <element signature="e#3051#3052#0" expanded="true" />
-            <element signature="e#3577#3628#0" expanded="true" />
-            <element signature="e#3810#3862#0" expanded="true" />
-            <element signature="e#4044#4099#0" expanded="true" />
-            <element signature="e#5406#5415#0" expanded="true" />
-            <element signature="e#6508#6559#0" expanded="true" />
+            <element signature="e#1591#3085#0" expanded="true" />
+            <element signature="e#1966#2020#0" expanded="true" />
+            <element signature="e#2246#2305#0" expanded="true" />
+            <element signature="e#2307#2662#0" expanded="true" />
+            <element signature="e#2661#2662#0" expanded="true" />
+            <element signature="e#2707#2769#0" expanded="true" />
+            <element signature="e#2771#2998#0" expanded="true" />
+            <element signature="e#2997#2998#0" expanded="true" />
+            <element signature="e#3084#3085#0" expanded="true" />
+            <element signature="e#3615#3675#0" expanded="true" />
+            <element signature="e#3847#3893#0" expanded="true" />
+            <element signature="e#4064#4128#0" expanded="true" />
+            <element signature="e#5425#5434#0" expanded="true" />
+            <element signature="e#6532#6583#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2269,19 +2184,20 @@
           <caret line="50" column="48" selection-start-line="50" selection-start-column="48" selection-end-line="50" selection-end-column="48" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1937#1991#0" expanded="true" />
-            <element signature="e#2217#2276#0" expanded="true" />
-            <element signature="e#2278#2629#0" expanded="true" />
-            <element signature="e#2628#2629#0" expanded="true" />
-            <element signature="e#2674#2736#0" expanded="true" />
-            <element signature="e#2738#2965#0" expanded="true" />
-            <element signature="e#2964#2965#0" expanded="true" />
-            <element signature="e#3051#3052#0" expanded="true" />
-            <element signature="e#3577#3628#0" expanded="true" />
-            <element signature="e#3810#3862#0" expanded="true" />
-            <element signature="e#4044#4099#0" expanded="true" />
-            <element signature="e#5406#5415#0" expanded="true" />
-            <element signature="e#6508#6559#0" expanded="true" />
+            <element signature="e#1591#3085#0" expanded="true" />
+            <element signature="e#1966#2020#0" expanded="true" />
+            <element signature="e#2246#2305#0" expanded="true" />
+            <element signature="e#2307#2662#0" expanded="true" />
+            <element signature="e#2661#2662#0" expanded="true" />
+            <element signature="e#2707#2769#0" expanded="true" />
+            <element signature="e#2771#2998#0" expanded="true" />
+            <element signature="e#2997#2998#0" expanded="true" />
+            <element signature="e#3084#3085#0" expanded="true" />
+            <element signature="e#3615#3675#0" expanded="true" />
+            <element signature="e#3847#3893#0" expanded="true" />
+            <element signature="e#4064#4128#0" expanded="true" />
+            <element signature="e#5425#5434#0" expanded="true" />
+            <element signature="e#6532#6583#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2329,19 +2245,20 @@
           <caret line="50" column="48" selection-start-line="50" selection-start-column="48" selection-end-line="50" selection-end-column="48" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1937#1991#0" expanded="true" />
-            <element signature="e#2217#2276#0" expanded="true" />
-            <element signature="e#2278#2629#0" expanded="true" />
-            <element signature="e#2628#2629#0" expanded="true" />
-            <element signature="e#2674#2736#0" expanded="true" />
-            <element signature="e#2738#2965#0" expanded="true" />
-            <element signature="e#2964#2965#0" expanded="true" />
-            <element signature="e#3051#3052#0" expanded="true" />
-            <element signature="e#3577#3628#0" expanded="true" />
-            <element signature="e#3810#3862#0" expanded="true" />
-            <element signature="e#4044#4099#0" expanded="true" />
-            <element signature="e#5406#5415#0" expanded="true" />
-            <element signature="e#6508#6559#0" expanded="true" />
+            <element signature="e#1591#3085#0" expanded="true" />
+            <element signature="e#1966#2020#0" expanded="true" />
+            <element signature="e#2246#2305#0" expanded="true" />
+            <element signature="e#2307#2662#0" expanded="true" />
+            <element signature="e#2661#2662#0" expanded="true" />
+            <element signature="e#2707#2769#0" expanded="true" />
+            <element signature="e#2771#2998#0" expanded="true" />
+            <element signature="e#2997#2998#0" expanded="true" />
+            <element signature="e#3084#3085#0" expanded="true" />
+            <element signature="e#3615#3675#0" expanded="true" />
+            <element signature="e#3847#3893#0" expanded="true" />
+            <element signature="e#4064#4128#0" expanded="true" />
+            <element signature="e#5425#5434#0" expanded="true" />
+            <element signature="e#6532#6583#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2389,19 +2306,20 @@
           <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1937#1991#0" expanded="true" />
-            <element signature="e#2217#2276#0" expanded="true" />
-            <element signature="e#2278#2629#0" expanded="true" />
-            <element signature="e#2628#2629#0" expanded="true" />
-            <element signature="e#2674#2736#0" expanded="true" />
-            <element signature="e#2738#2965#0" expanded="true" />
-            <element signature="e#2964#2965#0" expanded="true" />
-            <element signature="e#3051#3052#0" expanded="true" />
-            <element signature="e#3577#3628#0" expanded="true" />
-            <element signature="e#3810#3862#0" expanded="true" />
-            <element signature="e#4044#4099#0" expanded="true" />
-            <element signature="e#5406#5415#0" expanded="true" />
-            <element signature="e#6508#6559#0" expanded="true" />
+            <element signature="e#1591#3085#0" expanded="true" />
+            <element signature="e#1966#2020#0" expanded="true" />
+            <element signature="e#2246#2305#0" expanded="true" />
+            <element signature="e#2307#2662#0" expanded="true" />
+            <element signature="e#2661#2662#0" expanded="true" />
+            <element signature="e#2707#2769#0" expanded="true" />
+            <element signature="e#2771#2998#0" expanded="true" />
+            <element signature="e#2997#2998#0" expanded="true" />
+            <element signature="e#3084#3085#0" expanded="true" />
+            <element signature="e#3615#3675#0" expanded="true" />
+            <element signature="e#3847#3893#0" expanded="true" />
+            <element signature="e#4064#4128#0" expanded="true" />
+            <element signature="e#5425#5434#0" expanded="true" />
+            <element signature="e#6532#6583#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2582,14 +2500,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.92">
-          <caret line="19" column="44" selection-start-line="19" selection-start-column="44" selection-end-line="19" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/menu_file_list.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -2600,46 +2510,55 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/ua/xenonraite/sontik/flemanager/http/ServerAPI.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="6" column="41" selection-start-line="6" selection-start-column="41" selection-end-line="6" selection-end-column="41" />
+        <state vertical-scroll-proportion="-12.92">
+          <caret line="19" column="44" selection-start-line="19" selection-start-column="44" selection-end-line="19" selection-end-column="44" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/ua/xenonraite/sontik/flemanager/FileListActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/ua/xenonraite/sontik/flemanager/http/ServerAPI.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="51" column="41" selection-start-line="51" selection-start-column="41" selection-end-line="51" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1937#1991#0" expanded="true" />
-            <element signature="e#2217#2276#0" expanded="true" />
-            <element signature="e#2278#2629#0" expanded="true" />
-            <element signature="e#2628#2629#0" expanded="true" />
-            <element signature="e#2674#2736#0" expanded="true" />
-            <element signature="e#2738#2965#0" expanded="true" />
-            <element signature="e#2964#2965#0" expanded="true" />
-            <element signature="e#3051#3052#0" expanded="true" />
-            <element signature="e#3577#3628#0" expanded="true" />
-            <element signature="e#3810#3862#0" expanded="true" />
-            <element signature="e#4044#4099#0" expanded="true" />
-            <element signature="e#5406#5415#0" expanded="true" />
-            <element signature="e#6508#6559#0" expanded="true" />
-          </folding>
+          <caret line="10" column="53" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="53" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/ua/xenonraite/sontik/flemanager/http/FileManagerClient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.48253274">
-          <caret line="115" column="13" selection-start-line="115" selection-start-column="13" selection-end-line="115" selection-end-column="13" />
+        <state vertical-scroll-proportion="-0.8518519">
+          <caret line="172" column="0" selection-start-line="172" selection-start-column="0" selection-end-line="172" selection-end-column="0" />
           <folding>
             <element signature="e#0#43#0" expanded="true" />
             <element signature="imports" expanded="true" />
-            <element signature="e#1045#2413#0" expanded="true" />
-            <element signature="e#2412#2413#0" expanded="true" />
+            <element signature="e#1045#2422#0" expanded="true" />
+            <element signature="e#2421#2422#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/ua/xenonraite/sontik/flemanager/FileListActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.62882096">
+          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1591#3085#0" expanded="true" />
+            <element signature="e#1966#2020#0" expanded="true" />
+            <element signature="e#2246#2305#0" expanded="true" />
+            <element signature="e#2307#2662#0" expanded="true" />
+            <element signature="e#2661#2662#0" expanded="true" />
+            <element signature="e#2707#2769#0" expanded="true" />
+            <element signature="e#2771#2998#0" expanded="true" />
+            <element signature="e#2997#2998#0" expanded="true" />
+            <element signature="e#3084#3085#0" expanded="true" />
+            <element signature="e#3615#3675#0" expanded="true" />
+            <element signature="e#3847#3893#0" expanded="true" />
+            <element signature="e#4064#4128#0" expanded="true" />
+            <element signature="e#5425#5434#0" expanded="true" />
+            <element signature="e#6532#6583#0" expanded="true" />
           </folding>
         </state>
       </provider>

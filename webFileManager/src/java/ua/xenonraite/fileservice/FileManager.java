@@ -5,7 +5,10 @@
  */
 package ua.xenonraite.fileservice;
 
+import java.io.UnsupportedEncodingException;
 import java.util.Set;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.UriInfo;
 import javax.ws.rs.Consumes;
@@ -60,7 +63,7 @@ public class FileManager {
     }
 
     @GET
-    @Path("/printfile")
+    @Path(ServerAPI.GET_FILE_LIST)
     @Produces(MediaType.APPLICATION_JSON)
     public FileList produceJSONfile() {
 
@@ -69,7 +72,7 @@ public class FileManager {
     }
 
     @DELETE
-    @Path("/deletefile/{filename}")
+    @Path(ServerAPI.DELITE_FILES+"/{filename}")
     @Consumes(MediaType.TEXT_PLAIN)
     public Response produceDeleteFile(@PathParam("filename") PathSegment fileName) {
 
@@ -87,7 +90,7 @@ public class FileManager {
     }
 
     @DELETE
-    @Path("/deletefilejson")
+    @Path(ServerAPI.DELITE_FILES_NEW_METHOD)
     @Consumes(MediaType.APPLICATION_JSON)
     public Response produceJSONDeleteFile(ListIds ids) {
 
@@ -113,7 +116,7 @@ public class FileManager {
     }
 
     @PUT
-    @Path("/remanefile/{fileoldname}/{filenewname}")
+    @Path(ServerAPI.RENAME_FILE+"/{fileoldname}/{filenewname}")
     @Consumes(MediaType.APPLICATION_JSON)
     public Response produceRenameFile(@PathParam("fileoldname") String fileoldname, @PathParam("filenewname") String filenewname) {
 
@@ -123,6 +126,28 @@ public class FileManager {
         } else {
             return Response.status(Response.Status.NOT_FOUND).entity("file renamed failure").build();
         }
+    }
+    
+    @PUT
+    @Path(ServerAPI.RENAME_FILE_NEW_METHOD)
+    @Consumes(MediaType.APPLICATION_JSON)
+    public Response produceRenameFileJSON(RenameFileCell renameFileCell) {
+
+        try {
+            System.out.println("new Name"+renameFileCell.getNewname()+new String(renameFileCell.getNewname().getBytes("ANSI-1251"), "UTF-8") );
+        
+        
+        
+        boolean status = FileList.renameFile(new String(renameFileCell.getOldname().getBytes("ANSI-1251"), "UTF-8"), new String(renameFileCell.getNewname().getBytes("ANSI-1251"), "UTF-8"));
+        if (status) {
+            return Response.status(Response.Status.OK).entity("file renamed").build();
+        } else {
+            return Response.status(Response.Status.EXPECTATION_FAILED).entity("file renamed failure").build();
+        }
+        } catch (UnsupportedEncodingException ex) {
+            Logger.getLogger(FileManager.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return Response.status(Response.Status.EXPECTATION_FAILED).entity("file renamed failure").build();
     }
 
 }
