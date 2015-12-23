@@ -95,13 +95,13 @@ public class FileListActivity extends AppCompatActivity {
     public void showToastMessage(int codeMsg, String appendMsg) {
         switch(codeMsg){
             case RENAME_SUCSESS:
-                Toast.makeText(FileListActivity.this, getResources().getString(R.string.msg_file_renamed) + " " + appendMsg, Toast.LENGTH_SHORT).show();
+                Toast.makeText(FileListActivity.this, getResources().getString(R.string.msg_file_renamed) + " " + appendMsg==null?"+":appendMsg, Toast.LENGTH_SHORT).show();
                 break;
             case FILE_DELETED:
-                Toast.makeText(FileListActivity.this, getResources().getString(R.string.msg_files_deleted) + " " + appendMsg, Toast.LENGTH_SHORT).show();
+                Toast.makeText(FileListActivity.this, getResources().getString(R.string.msg_files_deleted) + " " + appendMsg==null?"+":appendMsg, Toast.LENGTH_SHORT).show();
                 break;
             case REFRESH_LIST:
-                Toast.makeText(FileListActivity.this, getResources().getString(R.string.msg_file_list_loaded) + " " + appendMsg, Toast.LENGTH_SHORT).show();
+                Toast.makeText(FileListActivity.this, getResources().getString(R.string.msg_file_list_loaded) + " " + appendMsg==null?"+":appendMsg, Toast.LENGTH_SHORT).show();
                 break;
             case RENAME_FAILURE:
                 break;

@@ -46,8 +46,8 @@
       <file leaf-file-name="FileListActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/ua/xenonraite/sontik/flemanager/FileListActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.87787354">
-              <caret line="147" column="13" selection-start-line="147" selection-start-column="13" selection-end-line="147" selection-end-column="13" />
+            <state vertical-scroll-proportion="2.7074237">
+              <caret line="103" column="147" selection-start-line="103" selection-start-column="147" selection-end-line="103" selection-end-column="147" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1509#2859#0" expanded="true" />
@@ -57,8 +57,8 @@
                 <element signature="e#2768#2769#0" expanded="true" />
                 <element signature="e#2858#2859#0" expanded="true" />
                 <element signature="e#3382#3433#0" expanded="true" />
-                <element signature="e#3589#3641#0" expanded="true" />
-                <element signature="e#3797#3852#0" expanded="true" />
+                <element signature="e#3609#3661#0" expanded="true" />
+                <element signature="e#3837#3892#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -77,13 +77,13 @@
       <file leaf-file-name="FileManagerClient.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/ua/xenonraite/sontik/flemanager/http/FileManagerClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+            <state vertical-scroll-proportion="-9.666667">
+              <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
               <folding>
                 <element signature="e#0#43#0" expanded="true" />
                 <element signature="imports" expanded="true" />
-                <element signature="e#891#2069#0" expanded="true" />
-                <element signature="e#2068#2069#0" expanded="true" />
+                <element signature="e#926#2254#0" expanded="true" />
+                <element signature="e#2253#2254#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -1943,7 +1943,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32963988" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Monitor" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32963988" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297568" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -2072,8 +2072,8 @@
             <element signature="e#2768#2769#0" expanded="true" />
             <element signature="e#2858#2859#0" expanded="true" />
             <element signature="e#3382#3433#0" expanded="true" />
-            <element signature="e#3589#3641#0" expanded="true" />
-            <element signature="e#3797#3852#0" expanded="true" />
+            <element signature="e#3609#3661#0" expanded="true" />
+            <element signature="e#3837#3892#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2128,8 +2128,8 @@
             <element signature="e#2768#2769#0" expanded="true" />
             <element signature="e#2858#2859#0" expanded="true" />
             <element signature="e#3382#3433#0" expanded="true" />
-            <element signature="e#3589#3641#0" expanded="true" />
-            <element signature="e#3797#3852#0" expanded="true" />
+            <element signature="e#3609#3661#0" expanded="true" />
+            <element signature="e#3837#3892#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2184,8 +2184,8 @@
             <element signature="e#2768#2769#0" expanded="true" />
             <element signature="e#2858#2859#0" expanded="true" />
             <element signature="e#3382#3433#0" expanded="true" />
-            <element signature="e#3589#3641#0" expanded="true" />
-            <element signature="e#3797#3852#0" expanded="true" />
+            <element signature="e#3609#3661#0" expanded="true" />
+            <element signature="e#3837#3892#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2240,8 +2240,8 @@
             <element signature="e#2768#2769#0" expanded="true" />
             <element signature="e#2858#2859#0" expanded="true" />
             <element signature="e#3382#3433#0" expanded="true" />
-            <element signature="e#3589#3641#0" expanded="true" />
-            <element signature="e#3797#3852#0" expanded="true" />
+            <element signature="e#3609#3661#0" expanded="true" />
+            <element signature="e#3837#3892#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2296,8 +2296,8 @@
             <element signature="e#2768#2769#0" expanded="true" />
             <element signature="e#2858#2859#0" expanded="true" />
             <element signature="e#3382#3433#0" expanded="true" />
-            <element signature="e#3589#3641#0" expanded="true" />
-            <element signature="e#3797#3852#0" expanded="true" />
+            <element signature="e#3609#3661#0" expanded="true" />
+            <element signature="e#3837#3892#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2504,21 +2504,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/ua/xenonraite/sontik/flemanager/http/FileManagerClient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+        <state vertical-scroll-proportion="-9.666667">
+          <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
           <folding>
             <element signature="e#0#43#0" expanded="true" />
             <element signature="imports" expanded="true" />
-            <element signature="e#891#2069#0" expanded="true" />
-            <element signature="e#2068#2069#0" expanded="true" />
+            <element signature="e#926#2254#0" expanded="true" />
+            <element signature="e#2253#2254#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/ua/xenonraite/sontik/flemanager/FileListActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.87787354">
-          <caret line="147" column="13" selection-start-line="147" selection-start-column="13" selection-end-line="147" selection-end-column="13" />
+        <state vertical-scroll-proportion="2.7074237">
+          <caret line="103" column="147" selection-start-line="103" selection-start-column="147" selection-end-line="103" selection-end-column="147" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1509#2859#0" expanded="true" />
@@ -2528,8 +2528,8 @@
             <element signature="e#2768#2769#0" expanded="true" />
             <element signature="e#2858#2859#0" expanded="true" />
             <element signature="e#3382#3433#0" expanded="true" />
-            <element signature="e#3589#3641#0" expanded="true" />
-            <element signature="e#3797#3852#0" expanded="true" />
+            <element signature="e#3609#3661#0" expanded="true" />
+            <element signature="e#3837#3892#0" expanded="true" />
           </folding>
         </state>
       </provider>

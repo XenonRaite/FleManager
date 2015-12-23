@@ -13,6 +13,7 @@ import org.apache.http.Header;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.net.HttpURLConnection;
 import java.util.ArrayList;
 
 import ua.xenonraite.sontik.flemanager.FileListActivity;
@@ -34,24 +35,26 @@ public class FileManagerClient {
         client.get(getAbsoluteUrl(ServerAPI.GET_FILE_LIST), new JsonHttpResponseHandler() {
             @Override
             public void onSuccess(int statusCode, org.apache.http.Header[] headers, JSONObject response) {
-                FileList.cleanFileList();
-                try {
-                    Log.d("FileManagerClient", response.getJSONArray("fileList").getString(0));
-                    //load list file from JSON
+                if (statusCode == HttpURLConnection.HTTP_OK) {
+                    FileList.cleanFileList();
+                    try {
+                        Log.d("FileManagerClient", response.getJSONArray("fileList").getString(0));
+                        //load list file from JSON
 
-                    int listSize = response.getJSONArray("fileList").length();
-                    for (int i = 0; i < listSize; i++) {
-                        FileList.addFileList(new FileCell(response.getJSONArray("fileList").getString(i),
-                                response.getJSONArray("fileSizeList").getInt(i)));
+                        int listSize = response.getJSONArray("fileList").length();
+                        for (int i = 0; i < listSize; i++) {
+                            FileList.addFileList(new FileCell(response.getJSONArray("fileList").getString(i),
+                                    response.getJSONArray("fileSizeList").getInt(i)));
+                        }
+                        for (FileCell cell : FileList.getFileList()) {
+                            Log.d("FileManagerClient", "Name:" + cell.getFileName() + " file size :" + cell.getFileSize());
+                        }
+                    } catch (JSONException e) {
+                        e.printStackTrace();
                     }
-                    for (FileCell cell : FileList.getFileList()) {
-                        Log.d("FileManagerClient", "Name:" + cell.getFileName() + " file size :" + cell.getFileSize());
-                    }
-                } catch (JSONException e) {
-                    e.printStackTrace();
+                    activity.refreshFileListView();
+                    activity.showToastMessage(FileListActivity.REFRESH_LIST, null);
                 }
-                activity.refreshFileListView();
-                activity.showToastMessage(FileListActivity.REFRESH_LIST,null);
             }
         });
     }
