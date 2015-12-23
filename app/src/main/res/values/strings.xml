@@ -6,4 +6,9 @@
     <string name="title_activity_main">MainActivity</string>
     <string name="action_delete">Delete</string>
     <string name="action_save">Save</string>
+
+
+    <string name="msg_files_deleted">File delete success</string>
+    <string name="msg_file_renamed">File renamed success</string>
+    <string name="msg_file_list_loaded">File list loaded</string>
 </resources>

@@ -2,11 +2,7 @@ package ua.xenonraite.sontik.flemanager;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
-import android.database.DataSetObserver;
 import android.os.Bundle;
-import android.os.Handler;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.InputType;
@@ -15,12 +11,8 @@ import android.util.SparseBooleanArray;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.CheckBox;
 import android.widget.EditText;
-import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -30,16 +22,17 @@ import ua.xenonraite.sontik.flemanager.data.FileList;
 import ua.xenonraite.sontik.flemanager.http.FileManagerClient;
 import ua.xenonraite.sontik.flemanager.view.FileListArrayAdapter;
 
+import static android.widget.AdapterView.*;
+
 public class FileListActivity extends AppCompatActivity {
 
     ListView listView;
 
-    final int REFRESH_LIST = 0;
-    final int FILE_DELETED = 1;
-    final int RENAME_SUCSESS = 3;
-    final int RENAME_FAILURE = 4;
+    public static final int REFRESH_LIST = 0;
+    public static final int FILE_DELETED = 1;
+    public static final int RENAME_SUCSESS = 2;
+    public static final int RENAME_FAILURE = 3;
 
-    Handler h;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,25 +41,12 @@ public class FileListActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-//        listView = (ListView) findViewById(R.id.listView);
-//
-//        listView.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
-//        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-//            @Override
-//            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-//                CheckBox checkBox = (CheckBox)view.findViewById(R.id.checkBox);
-//
-//                boolean changeCheckOn = !checkBox.isChecked();
-//                checkBox.setChecked(changeCheckOn);
-//                listView.setItemChecked(position,changeCheckOn);
-//            }
-//        });
 
         listView = (ListView) findViewById(R.id.listView);
         listView.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
 
 
-        listView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+        listView.setOnItemLongClickListener(new OnItemLongClickListener() {
             @Override
             public boolean onItemLongClick(AdapterView<?> parent, View view, final int position, long id) {
                 String fileName = FileList.getFileList().get(position).getFileName();
@@ -76,7 +56,7 @@ public class FileListActivity extends AppCompatActivity {
 
 
                 final EditText input = new EditText(FileListActivity.this);
-                input.setInputType(InputType.TYPE_CLASS_TEXT );
+                input.setInputType(InputType.TYPE_CLASS_TEXT);
                 builder.setView(input);
 
 
@@ -84,7 +64,7 @@ public class FileListActivity extends AppCompatActivity {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         String newname = input.getText().toString();
-                        FileManagerClient.renameFile(h,position,newname);
+                        FileManagerClient.renameFile(FileListActivity.this, position, newname);
                     }
                 });
                 builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
@@ -101,23 +81,8 @@ public class FileListActivity extends AppCompatActivity {
             }
         });
 
-        h = new Handler() {
-            public void handleMessage(android.os.Message msg) {
-                switch (msg.what) {
-                    case REFRESH_LIST:
-
-                       listView.setAdapter(new FileListArrayAdapter(FileListActivity.this, 0, FileList.getFileList()));
-                        Log.d("FileListActivity", "setAdapter");
-                        break;
-                    case FILE_DELETED:
-                        Toast.makeText(FileListActivity.this,"File Deleted",Toast.LENGTH_LONG).show();
-                        break;
-                    case RENAME_SUCSESS:
-                        Toast.makeText(FileListActivity.this,"File renamed",Toast.LENGTH_LONG).show();
-                        break;
-                }
-            };
-        };
+        FileManagerClient.getFileList(this);
+        Log.d("FileListActivity", "getFileList");
     }
 
     @Override
@@ -125,6 +90,29 @@ public class FileListActivity extends AppCompatActivity {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_file_list, menu);
         return true;
+    }
+
+    public void showToastMessage(int codeMsg, String appendMsg) {
+        switch(codeMsg){
+            case RENAME_SUCSESS:
+                Toast.makeText(FileListActivity.this, getResources().getString(R.string.msg_file_renamed) + " " + appendMsg, Toast.LENGTH_SHORT).show();
+                break;
+            case FILE_DELETED:
+                Toast.makeText(FileListActivity.this, getResources().getString(R.string.msg_files_deleted) + " " + appendMsg, Toast.LENGTH_SHORT).show();
+                break;
+            case REFRESH_LIST:
+                Toast.makeText(FileListActivity.this, getResources().getString(R.string.msg_file_list_loaded) + " " + appendMsg, Toast.LENGTH_SHORT).show();
+                break;
+            case RENAME_FAILURE:
+                break;
+            default:
+                break;
+        }
+    }
+
+    public void refreshFileListView() {
+        listView.setAdapter(new FileListArrayAdapter(FileListActivity.this, 0, FileList.getFileList()));
+        Log.d("FileListActivity", "setAdapter");
     }
 
     @Override
@@ -139,8 +127,8 @@ public class FileListActivity extends AppCompatActivity {
             return true;
         }
 
-        if(id== R.id.action_refresh){
-            FileManagerClient.getFileList(h);
+        if (id == R.id.action_refresh) {
+            FileManagerClient.getFileList(this);
             Log.d("FileListActivity", "getFileList");
         }
 
@@ -150,11 +138,11 @@ public class FileListActivity extends AppCompatActivity {
 
             SparseBooleanArray checked = listView.getCheckedItemPositions();
             if (checked != null) {
-                for (int i=0; i<checked.size(); i++) {
+                for (int i = 0; i < checked.size(); i++) {
                     if (checked.valueAt(i)) {
                         String _item = listView.getAdapter().getItem(
                                 checked.keyAt(i)).toString();
-                        Log.i("TEST",_item + " was selected");
+                        Log.i("TEST", _item + " was selected");
                     }
                 }
             }
@@ -163,12 +151,12 @@ public class FileListActivity extends AppCompatActivity {
                 if (checked.get(i)) {
                     listIds.add(i);
 
-                    Log.d("FileListActivity", "cheked "+i);
+                    Log.d("FileListActivity", "cheked " + i);
                 }
             }
 
             Log.d("FileListActivity", "action_delete");
-            FileManagerClient.deleteFilesByList(h,listIds);
+            FileManagerClient.deleteFilesByList(FileListActivity.this, listIds);
         }
 
         return super.onOptionsItemSelected(item);
