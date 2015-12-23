@@ -68,10 +68,10 @@ class FileList {
         f.delete();
     }
     
-    public static void renameFile(String oldnamefile,String newFIleName){
+    public static boolean renameFile(String oldnamefile,String newFIleName){
         File f = new File(DIRECTORY_PATH+"//"+oldnamefile);
-        f.renameTo(new File(DIRECTORY_PATH+"//"+ newFIleName));
-        
+        boolean success = f.renameTo(new File(DIRECTORY_PATH+"//"+ newFIleName));
+        return success;
     }
 
 }

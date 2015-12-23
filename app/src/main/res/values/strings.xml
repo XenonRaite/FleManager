@@ -11,4 +11,11 @@
     <string name="msg_files_deleted">File delete success</string>
     <string name="msg_file_renamed">File renamed success</string>
     <string name="msg_file_list_loaded">File list loaded</string>
+
+    <string name="dialog_rename_title">Rename select file</string>
+    <string name="dialog_rename_button_yes">Rename</string>
+    <string name="dialog_rename_button_cencel">Cencel</string>
+
+
+    <string name="error_notsupport">Not used</string>
 </resources>

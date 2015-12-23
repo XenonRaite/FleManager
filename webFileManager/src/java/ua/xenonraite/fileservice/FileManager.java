@@ -58,7 +58,7 @@ public class FileManager {
     @Consumes(MediaType.APPLICATION_JSON)
     public void putJson(String content) {
     }
-    
+
     @GET
     @Path("/printfile")
     @Produces(MediaType.APPLICATION_JSON)
@@ -67,42 +67,62 @@ public class FileManager {
         return new FileList();
 
     }
-    
+
     @DELETE
     @Path("/deletefile/{filename}")
     @Consumes(MediaType.TEXT_PLAIN)
-    public Response produceDeleteFile(@PathParam("filename")PathSegment fileName) {
+    public Response produceDeleteFile(@PathParam("filename") PathSegment fileName) {
+
         
-        //System.out.println(fileName);
-        
-       // String[] files = fileName.split(";");
-       
-       Set<String> ids = fileName.getMatrixParameters().keySet();
-       
-       String names = "";
-       for(String filename : ids){
+        Set<String> ids = fileName.getMatrixParameters().keySet();
+
+        String names = "";
+        for (String filename : ids) {
             FileList.removeFile(filename);
-            names = names+filename;
-       }
-       System.out.println("file to deleted"+names);
-       
-       //String filedeleted = "File delete" + fileName;
-        
-        
-        //for(String fileNameForDelete : files)
-        //    FileList.removeFile(fileNameForDelete);
-        
+            names = names + filename;
+        }
+        System.out.println("file to deleted" + names);
+
         return Response.status(Response.Status.OK).entity(names).build();
     }
-    
+
+    @DELETE
+    @Path("/deletefilejson")
+    @Consumes(MediaType.APPLICATION_JSON)
+    public Response produceJSONDeleteFile(ListIds ids) {
+
+        if (ids != null && ids.getIds() != null) {
+
+            FileList fileList = new FileList();
+            for(int id : ids.getIds()){
+                FileList.removeFile(fileList.getFileList()[id]);
+            }
+            
+            return Response.ok().build();
+        }
+
+        return Response.serverError().build();
+    }
+
+    @GET
+    @Path("/listids")
+    @Produces(MediaType.APPLICATION_JSON)
+    public ListIds getListIds() {
+
+        return new ListIds(new int[]{1, 2, 3, 4, 5, 6});
+    }
+
     @PUT
     @Path("/remanefile/{fileoldname}/{filenewname}")
     @Consumes(MediaType.APPLICATION_JSON)
-    public Response produceJSONdeletefile( @PathParam("fileoldname") String fileoldname,@PathParam("filenewname") String filenewname) {
-        
-        FileList.renameFile(fileoldname, filenewname);
-        
-        return Response.status(Response.Status.OK).entity("file rnamed").build();
+    public Response produceRenameFile(@PathParam("fileoldname") String fileoldname, @PathParam("filenewname") String filenewname) {
+
+        boolean status = FileList.renameFile(fileoldname, filenewname);
+        if (status) {
+            return Response.status(Response.Status.FOUND).entity("file renamed").build();
+        } else {
+            return Response.status(Response.Status.NOT_FOUND).entity("file renamed failure").build();
+        }
     }
-    
+
 }

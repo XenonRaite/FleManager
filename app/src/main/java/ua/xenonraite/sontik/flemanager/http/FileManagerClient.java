@@ -10,9 +10,12 @@ import com.loopj.android.http.*;
 
 
 import org.apache.http.Header;
+import org.apache.http.entity.ByteArrayEntity;
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.UnsupportedEncodingException;
 import java.net.HttpURLConnection;
 import java.util.ArrayList;
 
@@ -52,6 +55,7 @@ public class FileManagerClient {
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }
+                    //need refresh list
                     activity.refreshFileListView();
                     activity.showToastMessage(FileListActivity.REFRESH_LIST, null);
                 }
@@ -59,6 +63,8 @@ public class FileManagerClient {
         });
     }
 
+
+    @Deprecated
     public static void deleteFilesByList(final FileListActivity fileListActivity, ArrayList<Integer> ids) {
         Log.d("FileListActivity", "deleteFilesByList");
 
@@ -85,18 +91,62 @@ public class FileManagerClient {
             public void onSuccess(int i, Header[] headers, byte[] bytes) {
 
                 Log.d("FileListActivity", "deleteFiles onSuccess");
-                fileListActivity.showToastMessage(FileListActivity.FILE_DELETED,null);
+                fileListActivity.showToastMessage(FileListActivity.FILE_DELETED, null);
+                //need refresh list
+                FileManagerClient.getFileList(fileListActivity);
             }
 
             @Override
             public void onFailure(int i, Header[] headers, byte[] bytes, Throwable throwable) {
 
-                Log.d("FileListActivity", "deleteFiles onSuccess");
+                Log.d("FileListActivity", "deleteFiles onFailure");
             }
         });
 
     }
+    public static void deleteFilesByListWithJson(final FileListActivity fileListActivity, ArrayList<Integer> ids) {
 
+        JSONArray  jsonArray = new JSONArray();
+        for(int id : ids){
+            jsonArray.put(id);
+        }
+
+
+        JSONObject obj=new JSONObject();
+        try {
+            obj.put("ids",jsonArray);
+        } catch (JSONException e) {
+            Log.d("JSON ERROR","JSONException");
+            e.printStackTrace();
+        }
+
+        ByteArrayEntity entity = null;
+        try {
+            entity = new ByteArrayEntity(obj.toString().getBytes("UTF-8"));
+            Log.d("JSON",obj.toString());
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+        client.delete(fileListActivity, getAbsoluteUrl(ServerAPI.DELITE_FILES_NEW_METHOD), entity, "application/json", new AsyncHttpResponseHandler() {
+            @Override
+            public void onSuccess(int i, Header[] headers, byte[] bytes) {
+
+                Log.d("FileListActivity", "deleteFiles new method onSuccess");
+                fileListActivity.showToastMessage(FileListActivity.FILE_DELETED, null);
+                //need refresh list
+                FileManagerClient.getFileList(fileListActivity);
+
+            }
+
+            @Override
+            public void onFailure(int i, Header[] headers, byte[] bytes, Throwable throwable) {
+
+                Log.d("FileListActivity", "deleteFiles new method onFailure");
+
+            }
+        });
+
+    }
     public static void renameFile(final FileListActivity fileListActivity, int indexFile, String fileNewName) {
         String oldnamefile = FileList.getFileList().get(indexFile).getFileName();
 
@@ -107,6 +157,8 @@ public class FileManagerClient {
 
 
                 fileListActivity.showToastMessage(FileListActivity.RENAME_SUCSESS, null);
+                //need refresh list
+                FileManagerClient.getFileList(fileListActivity);
 
             }
 
