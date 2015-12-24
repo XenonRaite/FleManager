@@ -15,6 +15,8 @@ public class ServerAPI {
     public static final String RENAME_FILE_NEW_METHOD = "/remanefilejson";
     public static final String DELITE_FILES = "/deletefile";
     public static final String DELITE_FILES_NEW_METHOD = "/deletefilejson";
+
+    public static final String FILE_DOWNLOAD = "/downloadfilejson";
     
 
 

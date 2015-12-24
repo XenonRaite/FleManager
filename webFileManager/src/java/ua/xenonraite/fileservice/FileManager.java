@@ -5,6 +5,7 @@
  */
 package ua.xenonraite.fileservice;
 
+import java.io.File;
 import java.io.UnsupportedEncodingException;
 import java.util.Set;
 import java.util.logging.Level;
@@ -72,11 +73,10 @@ public class FileManager {
     }
 
     @DELETE
-    @Path(ServerAPI.DELITE_FILES+"/{filename}")
+    @Path(ServerAPI.DELITE_FILES + "/{filename}")
     @Consumes(MediaType.TEXT_PLAIN)
     public Response produceDeleteFile(@PathParam("filename") PathSegment fileName) {
 
-        
         Set<String> ids = fileName.getMatrixParameters().keySet();
 
         String names = "";
@@ -97,10 +97,10 @@ public class FileManager {
         if (ids != null && ids.getIds() != null) {
 
             FileList fileList = new FileList();
-            for(int id : ids.getIds()){
+            for (int id : ids.getIds()) {
                 FileList.removeFile(fileList.getFileList()[id]);
             }
-            
+
             return Response.ok().build();
         }
 
@@ -116,7 +116,7 @@ public class FileManager {
     }
 
     @PUT
-    @Path(ServerAPI.RENAME_FILE+"/{fileoldname}/{filenewname}")
+    @Path(ServerAPI.RENAME_FILE + "/{fileoldname}/{filenewname}")
     @Consumes(MediaType.APPLICATION_JSON)
     public Response produceRenameFile(@PathParam("fileoldname") String fileoldname, @PathParam("filenewname") String filenewname) {
 
@@ -127,27 +127,57 @@ public class FileManager {
             return Response.status(Response.Status.NOT_FOUND).entity("file renamed failure").build();
         }
     }
-    
+
     @PUT
     @Path(ServerAPI.RENAME_FILE_NEW_METHOD)
     @Consumes(MediaType.APPLICATION_JSON)
     public Response produceRenameFileJSON(RenameFileCell renameFileCell) {
 
         try {
-            System.out.println("new Name"+renameFileCell.getNewname()+new String(renameFileCell.getNewname().getBytes("ANSI-1251"), "UTF-8") );
-        
-        
-        
-        boolean status = FileList.renameFile(new String(renameFileCell.getOldname().getBytes("ANSI-1251"), "UTF-8"), new String(renameFileCell.getNewname().getBytes("ANSI-1251"), "UTF-8"));
-        if (status) {
-            return Response.status(Response.Status.OK).entity("file renamed").build();
-        } else {
-            return Response.status(Response.Status.EXPECTATION_FAILED).entity("file renamed failure").build();
-        }
+            System.out.println("new Name" + renameFileCell.getNewname() + new String(renameFileCell.getNewname().getBytes("ANSI-1251"), "UTF-8"));
+
+            boolean status = FileList.renameFile(new String(renameFileCell.getOldname().getBytes("ANSI-1251"), "UTF-8"), new String(renameFileCell.getNewname().getBytes("ANSI-1251"), "UTF-8"));
+            if (status) {
+                return Response.status(Response.Status.OK).entity("file renamed").build();
+            } else {
+                return Response.status(Response.Status.EXPECTATION_FAILED).entity("file renamed failure").build();
+            }
         } catch (UnsupportedEncodingException ex) {
             Logger.getLogger(FileManager.class.getName()).log(Level.SEVERE, null, ex);
         }
         return Response.status(Response.Status.EXPECTATION_FAILED).entity("file renamed failure").build();
+    }
+//
+//    @GET
+//    @Path("unused")
+//    @Consumes(MediaType.APPLICATION_JSON)
+//    public Response fileDownload(FileName fileName) {
+//
+//        File file = new File(FileList.DIRECTORY_PATH + "//" + fileName.getFileName());
+//        if (!file.exists()) {
+//            return Response.serverError().build();
+//        }
+//
+//        return Response.ok(file, "application/zip").build();
+//    }
+
+    @GET
+    @Path(ServerAPI.FILE_DOWNLOAD)
+    //@Produces(MediaType.APPLICATION_OCTET_STREAM)
+    @Consumes(MediaType.APPLICATION_JSON)
+    public Response getFile(FileName fileName) {
+            System.out.println(" get file request " );
+        
+        File file = new File(FileList.DIRECTORY_PATH + "//" + fileName.getFileName());
+        if (!file.exists()) {
+            System.out.println("file not found " + fileName.getFileName());
+            System.out.println("URI =  " + FileList.DIRECTORY_PATH + "//" + fileName.getFileName());
+            return Response.status(Response.Status.NOT_FOUND).build();
+        }
+            System.out.println(" Response.ok " );
+        return Response.ok(file, MediaType.APPLICATION_OCTET_STREAM)
+                .header("Content-Disposition", "attachment; filename=\"" + file.getName() + "\"") //optional
+                .build();
     }
 
 }
