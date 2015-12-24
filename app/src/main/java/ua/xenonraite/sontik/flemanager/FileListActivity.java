@@ -34,6 +34,7 @@ public class FileListActivity extends AppCompatActivity {
     public static final int RENAME_SUCSESS = 2;
     public static final int RENAME_FAILURE = 3;
     public static final int MSG = 4;
+    public static final int MSG_DOWNLOADED = 5;
 
 
     @Override
@@ -89,6 +90,8 @@ public class FileListActivity extends AppCompatActivity {
     }
 
     public void showToastMessage(Activity activity,int codeMsg, String appendMsg) {
+        if(activity == null)
+            return;
         switch (codeMsg) {
             case RENAME_SUCSESS:
                 Toast.makeText(activity, activity.getResources().getString(R.string.msg_file_renamed) + " " + ((appendMsg == null) ? "" : appendMsg), Toast.LENGTH_SHORT).show();
@@ -100,6 +103,9 @@ public class FileListActivity extends AppCompatActivity {
                 Toast.makeText(activity,activity.getResources().getString(R.string.msg_file_list_loaded) + " " + ((appendMsg == null) ? "" : appendMsg), Toast.LENGTH_SHORT).show();
                 break;
             case RENAME_FAILURE:
+                break;
+            case MSG_DOWNLOADED:
+                Toast.makeText(activity,activity.getResources().getString(R.string.msg_files_dowloaded) + " " + ((appendMsg == null) ? "" : appendMsg), Toast.LENGTH_SHORT).show();
                 break;
             case MSG:
                 Toast.makeText(activity, appendMsg == null ? "+" : appendMsg, Toast.LENGTH_SHORT).show();
@@ -150,8 +156,21 @@ public class FileListActivity extends AppCompatActivity {
                         Log.d("FileListActivity", "cheked " + i);
                     }
                 }
+                if(listIds.size() == 0)
+                    return true;
                 Log.d("FileListActivity", "action_delete");
                 FileManagerClient.deleteFilesByListWithJson(FileListActivity.this, listIds);
+                return true;
+            case R.id.action_download:
+                ArrayList<Integer> listIdsLoLoad = new ArrayList<Integer>();
+                SparseBooleanArray caseFile = fileListView.getCheckedItemPositions();for (int i = 0; i < fileListView.getAdapter().getCount(); i++) {
+                if (caseFile.get(i)) {
+                    listIdsLoLoad.add(i);
+                    Log.d("FileListActivity", "cheked " + i);
+                }
+            }
+                Log.d("FileListActivity", "action_download");
+                FileManagerClient.downloadFileTest(this, listIdsLoLoad);
                 return true;
             default:
                 showToastMessage(this,MSG, getResources().getString(R.string.error_notsupport));

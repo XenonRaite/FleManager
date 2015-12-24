@@ -17,11 +17,11 @@
         app:showAsAction="ifRoom"
         android:icon="@android:drawable/ic_menu_delete"
         android:title="@string/action_delete" />
-    <!--<item
+    <item
         android:id="@+id/action_download"
         app:showAsAction="ifRoom"
         android:icon="@android:drawable/ic_menu_save"
-        android:title="@string/action_save" />-->
+        android:title="@string/action_save" />
 
 
 
